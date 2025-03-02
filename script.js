@@ -1,36 +1,38 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+document.addEventListener('DOMContentLoaded', function() {
+    // Project item hover effect
+    const projectItems = document.querySelectorAll('.project-item');
+    projectItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'scale(1.05)';
+        });
 
-    // Retrieve form field values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'scale(1)';
+        });
+    });
 
-    // Get feedback elements
-    const feedbackElement = document.getElementById('feedback');
-    
-    // Basic validation
-    if (name === '' || email === '' || message === '') {
-        feedbackElement.textContent = 'Please fill in all fields.';
-        feedbackElement.style.color = 'red';
-        return;
-    }
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-    // Email validation using regex
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) {
-        feedbackElement.textContent = 'Please enter a valid email address.';
-        feedbackElement.style.color = 'red';
-        return;
-    }
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
-    // Clear any previous feedback
-    feedbackElement.textContent = '';
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            document.querySelector("header").classList.add("header-scrolled");
+        } else {
+            document.querySelector("header").classList.remove("header-scrolled");
+        }
+    });
+});
+// script.js (Simplified)
 
-    // Simulate form submission success
-    feedbackElement.textContent = `Thank you for your message, ${name}!`;
-    feedbackElement.style.color = 'green';
-    
-    // Clear the form fields after submission
-    this.reset();
+document.addEventListener('DOMContentLoaded', function() {
+    // We are removing all Javascript functionality to test the html links.
 });
