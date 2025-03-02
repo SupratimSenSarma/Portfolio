@@ -3,109 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supratim Sen Sarma - Portfolio</title>
+    <title>Your Name - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>SUPRATIM SEN SARMA</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li> <!-- Updated link -->
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+        </nav>
     </header>
-
-    <main>
-        <section id="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Hello! I’m <strong>Supratim Sen Sarma</strong>, a dedicated and enthusiastic student pursuing a Bachelor of Technology in Computer Science with a specialization in Artificial Intelligence and Machine Learning at <strong>Sister Nivedita University</strong>. Currently in my third year, I am deeply passionate about coding and always excited to explore new technologies and methodologies.</p>
-                <p>My journey in technology has been fueled by a strong curiosity and a love for learning. I am committed to pushing the boundaries of what’s possible, whether it's through developing innovative applications, diving into complex algorithms, or staying ahead of the curve with the latest tech trends. My goal is to create impactful solutions and continuously grow both professionally and personally.</p>
-            </div>
-        </section>
-
-        <section id="education"> <!-- New Education Section -->
-            <div class="container">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <h3>Bachelor of Technology in Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning</h3>
-                    <p><strong>Sister Nivedita University</strong></p>
-                    <p><strong>Expected Graduation:</strong> 2026</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="project">
-                    <h3>BASIC CALCULATOR</h3>
-                    <p>I have made this project with HTML,CSS and JS. It performs basic operations like +,-,/,*</p>
-                </div>
-                <div class="project">
-                    <h3>Basic to do web app</h3>
-                    <p>I have made this project with HTML,CSS and JS. We can list down the work we have to do.</p>
-                </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-                <h2>Skills</h2>
-                <p>Here are some of the skills I have acquired through my studies and projects:</p>
-                <ul class="skills-list">
-                    <li><strong>Programming Languages:</strong> C, C++, PYTHON</li>
-                    <li><strong>Web Technologies:</strong> HTML, CSS, JAVASCRIPT, REACT</li>
-                </ul>
-                <p>If you would like to get in touch, feel free to email me at: <a href="mailto:sensarma1967@gmail.com">sensarma1967@gmail.com</a></p>
-            </div>
-        </section>
-
-        <section id="certifications">
-            <div class="container">
-                <h2>Certifications</h2>
-                <p>I have earned the following certifications that complement my skills and knowledge:</p>
-                <ul class="certifications-list">
-                    <li><strong>Oracle Certified Foundation Associate</strong> – Oracle University, July 21, 2023</li>
-                    <li><strong>Data Structures in C</strong> – Aptech Learning, July 7, 2023</li>
-                    <li><strong>Programming in C++</strong> – Aptech Learning, February 10, 2023</li>
-                    <li><strong>Programming in C</strong> – Aptech Learning, February 8, 2023</li>
-                    <li><strong>Web Development</strong> – Internshala, January 28, 2023</li>
-                    <!-- Add more certifications as needed -->
-                </ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm SUPRATIM SEN SARMA</h1>
+            <p>A passionate developer creating unique digital experiences.</p>
+            <a href="#projects" class="btn">View Projects</a>
         </div>
+        <div class="hero-visual">
+            <div class="circles-container">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <h3>TEMPERATURE CONVERTER</h3>
+                <p>The Temperature Converter App allows users to convert temperatures between Celsius, Fahrenheit, and Kelvin, with a toggle for Light/Dark Mode and real-time time display.</p>
+                <a href="temperature-converter.html" class="btn btn-secondary">Learn More</a>
+            </div>
+            <div class="project-item">
+                <h3>LUDO GAME</h3>
+                <p>This project is a web-based implementation of the classic Ludo game, offering an interactive and visually appealing experience.</p>
+                <a href="ludo-game.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 [SUPRATIM]. All rights reserved.</p>
     </footer>
-
-    <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        
-        <button type="submit">Send</button>
-        
-        <!-- Feedback area -->
-        <div id="feedback"></div>
-    </form>
-    
-
     <script src="script.js"></script>
 </body>
 </html>
